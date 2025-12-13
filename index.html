@@ -19,15 +19,29 @@
     <!-- Cabeçalho -->
 
     <header>
-        <div class="container d-flex align=items-center justify-content-between">
-            <img id="logotipo" src="./assets/logotipo.png" alt="">
+        <div class="container d-flex align-items-center justify-content-between">
+            <button id="menu-hamburger">
+                <img src="./assets/menu-hamburger.svg" alt="">
+            </button>
 
-            <ul class="d-flex gap-4 align-items-center">
-                <li class="pagina-atual">Home</li>
-                <li>Loja</li>
-                <li>Fórum</li>
-                <li>Suporte</li>
-            </ul>
+            <a href="#">
+                <img id="logotipo" src="./assets/logotipo.png" alt="" tabindex="0">
+            </a>
+
+
+            <nav class="nav-desktop">
+                <ul class="d-flex gap-3 align-items-center">
+                    <a class="pagina-atual" href="#">
+                        <li>Home</li>
+                    </a>
+                    <a href=""></a>
+                    <li>Loja</li></a>
+                    <a href=""></a>
+                    <li>Fórum</li></a>
+                    <a href=""></a>
+                    <li>Suporte</li></a>
+                </ul>
+            </nav>
 
             <div class="d-flex gap-2 align-items-center">
                 <button class="cta-header">
@@ -40,9 +54,44 @@
         </div>
     </header>
 
+    <div id="menu-mobile-aberto">
+        <button id="menu-mobile__fechar"><img src="./assets/fechar-icone.svg" alt=""></button>
+        <nav>
+            <ul class="d-flex flex-column gap-3 p-0">
+                <a href="" class="pagina-atual">
+                    <div class="d-flex align-itemms-center gap-4">
+                        <img src="./assets/home-icone.svg" alt="Ícone de casa relacionado à página principal">
+                        <li>Home</li>
+                    </div>
+                </a>
+
+                <a href="">     
+                <div class="d-flex align-itemms-center gap-4">
+                    <img src="./assets/loja-icone.svg" alt="Ícone de carrinho de compras relacionado à página de loja">
+                    <li>Loja</li>
+                </div>
+                </a>
+                <a href="">
+                    <div class="d-flex align-itemms-center gap-4">
+                        <img src="./assets/forum-icone.svg" alt="Ícone de balões de fala relacionado ao fórum">
+                        <li>Fórum</li>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="d-flex align-itemms-center gap-4">
+                        <img src="./assets/suporte-icone.svg"
+                            alt="Ícone de balão de pergunta relacionado à página de suporte">
+                        <li>Suporte</li>
+                    </div>
+                </a>
+            </ul>
+        </nav>
+    </div>
 
     <!-- Conteúdo Principal -->
     <main class="">
+
         <section id="hero-section" class="d-flex justify-content-center">
             <div id="hero__contraste"></div>
             <div class="container">
@@ -540,6 +589,7 @@
         crossorigin="anonymous"></script>
 
     <script src="js/script.js"></script>
+    <script src="./js/menuHamburger.js"></script>
 
 </body>
 

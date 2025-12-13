@@ -26,12 +26,23 @@ h3 {
     font-weight: bold;
 }
 
-h1{
+h1 {
     font-size: 32px;
 }
 
-.pagina-atual{
-    font-weight: bold
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.pagina-atual {
+    font-weight: bold;
+
+    color: white
 }
 
 /* HEADER */
@@ -42,9 +53,42 @@ header {
     left: 0;
     right: 0;
     z-index: 99;
-    background: var(--bg-principal);
+    background: rgba(30, 30, 30, 0.719);
     padding: 20px 0;
     box-shadow: 0px 1px 8px rgba(27, 27, 27, 0.445);
+    backdrop-filter: blur(4px)
+}
+
+#menu-hamburger {
+    display: none;
+    background: none;
+    border: none;
+}
+
+#menu-mobile-aberto {
+    position: relative;
+    background: rgba(30, 30, 30, 0.7);
+    backdrop-filter: blur(15px);
+    color: #FFF;
+    position: fixed;
+    z-index: 99999;
+    inset: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-mobile__fechar{
+    background: none;
+    border: none;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+#menu-mobile-aberto li{
+    font-size: 2rem;
 }
 
 #logotipo {
@@ -52,16 +96,21 @@ header {
     border-radius: 20px;
 }
 
-header ul {
+header nav {
+    height: fit-content;
+
+}
+
+header nav ul {
     color: #FFF;
-    list-style: none;
     margin: 0;
     font-family: "Sora", sans-serif;
     font-size: 14px;
     font-weight: 300;
+    padding: 0;
 }
 
-.cta-header{
+.cta-header {
     border: none;
     background-color: var(--azul-cta);
     width: 38px;
@@ -69,7 +118,16 @@ header ul {
     border-radius: 12px;
 }
 
-.cta-header:hover{
+.cta-header:hover {
     cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+    .nav-desktop {
+        display: none;
+    }
+
+    #menu-hamburger {
+        display: flex;
+    }
+}
