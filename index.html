@@ -9,8 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/cards.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -67,11 +68,12 @@
                     </div>
                 </a>
 
-                <a href="">     
-                <div class="d-flex align-itemms-center gap-4">
-                    <img src="./assets/loja-icone.svg" alt="Ícone de carrinho de compras relacionado à página de loja">
-                    <li>Loja</li>
-                </div>
+                <a href="">
+                    <div class="d-flex align-itemms-center gap-4">
+                        <img src="./assets/loja-icone.svg"
+                            alt="Ícone de carrinho de compras relacionado à página de loja">
+                        <li>Loja</li>
+                    </div>
                 </a>
                 <a href="">
                     <div class="d-flex align-itemms-center gap-4">
@@ -463,69 +465,7 @@
     <footer class="pt-5 mt-3 rodape" role="contentinfo">
 
         <div class="container">
-            <div class="row gy-4 text-center justify-content-center">
-
-                <!-- Marca e contato -->
-                <div class="col-12 col-md-4">
-
-                    <a href="#topo" class="d-inline-flex align-items-center mb-3 text-decoration-none"
-                        aria-label="Página inicial da Iara Games">
-                        <img src="./assets/LogoOficial.png" alt="Logotipo da Iara Games" class="img-fluid me-2"
-                            width="40" height="40" />
-                        <span class="fs-5 fw-semibold texto-footer">Iara Games</span>
-                    </a>
-
-                    <p class="mb-2 texto-footer">Jogos que conectam pessoas</p>
-
-                    <address class="small text-secondary mb-0">
-                        <a href="email:contato@iaragames.com"
-                            class="link-opacity-75-hover d-block link">contato@iaragames.com</a>
-                        <a href="tel:+5511999999999" class="link-opacity-75-hover d-block link">+55 (11) 99999-9999</a>
-                        <p>São Paulo, SP — Brasil</p>
-                    </address>
-
-
-                </div>
-
-                <!-- Navegação: Empresa -->
-                <div class="col-6 col-md-2">
-                    <h6 class="text-uppercase small mb-3 texto-footer">Empresa</h6>
-                    <ul class="list-unstyled mb-0">
-                        <li><a class="link-opacity-75-hover link" href="">Sobre</a></li>
-                        <li><a class="link-opacity-75-hover link" href="">Carreiras</a></li>
-                    </ul>
-                </div>
-
-                <!-- Navegação: Suporte -->
-                <div class="col-6 col-md-2">
-                    <h6 class="text-uppercase small mb-3 texto-footer">Suporte</h6>
-                    <ul class="list-unstyled mb-0">
-                        <li><a class="link-opacity-75-hover link" href="./pages/suporte.html">Ajuda</a></li>
-                        <li><a class="link-opacity-75-hover link" href="./pages/suporte.html">FAQ</a></li>
-                        <li><a class="link-opacity-75-hover link" href="./pages/suporte.html">Contato</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <hr class="border-secondary my-4" />
-
-            <!-- Direitos e links -->
-            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 py-3">
-                <div class="small text-secondary text-center text-md-start">
-                    © <span id="year"></span> Iara Games. Todos os direitos reservados
-
-                    <a class="link-opacity-75-hover ms-2 link" href="/privacidade">Privacidade</a>
-                    <a class="link-opacity-75-hover ms-2 link" href="/termos">Termos</a>
-                    <a class="link-opacity-75-hover ms-2 link" href="/cookies">Cookies</a>
-                    <a class="link-opacity-75-hover ms-2 link" href="/cookies">Preferências de cookies</a>
-                </div>
-
-                <div>
-                    <a href="#topo" class="btn border-primary btn-sm botao-topo"
-                        aria-label="Voltar ao topo da página">↑</a>
-                </div>
-            </div>
-
+            <img id="logotipo-footer" src="./assets/logotipo.png" alt="Logotipo Iara Games">
         </div>
     </footer>
 
@@ -591,6 +531,7 @@
         crossorigin="anonymous"></script>
 
     <script src="js/script.js"></script>
+    <script src="js/cards.js" defer></script>
     <script src="./js/menuHamburger.js"></script>
 
 </body>

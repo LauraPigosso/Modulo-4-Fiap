@@ -412,10 +412,6 @@ img.icone {
   color: var(--escuro-texto-secundario);
 }
 
-.rodape {
-  background-color: var(--escuro-bg-secundario);
-  border-top: 1px solid var(--escuro-detalhes-bordas);
-}
 
 .texto-footer {
   color: var(--escuro-texto-principal)

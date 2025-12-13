@@ -4,6 +4,7 @@
     --verde-agua: #00A688;
     --bg-principal: #1E1E1E;
     --bg-secundario: #2A2A2A;
+    --bg-footer: #121212;
     --texto-principal: #EDEDED;
     --texto-secundario: #9CA3AF;
     --detalhes-bordas: #3A3A3A;
@@ -83,7 +84,6 @@ header {
 
 #menu-mobile-aberto.ativo {
     display: flex;
-    transition: 0.3s ease;
 }
 
 #menu-mobile__fechar {
@@ -127,6 +127,10 @@ header nav ul {
 
 .cta-header:hover {
     cursor: pointer;
+}
+
+footer{
+    background-color: var(--bg-footer)
 }
 
 @media screen and (max-width: 768px) {
