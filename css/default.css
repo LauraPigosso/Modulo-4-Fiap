@@ -34,7 +34,7 @@ ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: #FFF;
 }
@@ -65,6 +65,8 @@ header {
     border: none;
 }
 
+
+
 #menu-mobile-aberto {
     position: relative;
     background: rgba(30, 30, 30, 0.7);
@@ -74,12 +76,17 @@ header {
     z-index: 99999;
     inset: 0;
     padding: 2rem;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
 
-#menu-mobile__fechar{
+#menu-mobile-aberto.ativo {
+    display: flex;
+    transition: 0.3s ease;
+}
+
+#menu-mobile__fechar {
     background: none;
     border: none;
     position: absolute;
@@ -87,7 +94,7 @@ header {
     right: 2rem;
 }
 
-#menu-mobile-aberto li{
+#menu-mobile-aberto li {
     font-size: 2rem;
 }
 
