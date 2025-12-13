@@ -41,7 +41,7 @@
   --card4line-gap-carousel: 16px;
 
   /* dimensões dos cards */
-  --card4line-card-width-desktop: 300px;
+  --card4line-card-width-desktop: 1fr;
   --card4line-card-height-desktop: 261px;
   --card4line-card-width-tablet: 260px;
   --card4line-card-width-mobile: 250px;
@@ -63,7 +63,7 @@
 #card4line,
 .card4line {
   display: grid;
-  grid-template-columns: repeat(4, var(--card4line-card-width-desktop));
+  grid-template-columns: repeat(4, 1fr);
   grid-column-gap: var(--card4line-gap-desktop);
   grid-row-gap: var(--card4line-row-gap);
   justify-content: center;
