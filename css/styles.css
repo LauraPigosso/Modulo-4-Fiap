@@ -618,8 +618,7 @@ button {
 
 #hero__cta-loja {
   background: none;
-  outline: 3px solid white;
-  outline-offset: -3px;
+  box-shadow: inset 0 0 0 3px #FFF;
 }
 
 @media screen and (max-width: 768px){

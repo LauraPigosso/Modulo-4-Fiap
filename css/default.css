@@ -17,6 +17,7 @@
 
 body {
     font-family: "Baloo 2";
+
 }
 
 h1,
@@ -125,10 +126,12 @@ header nav ul {
     width: 38px;
     height: 38px;
     border-radius: 12px;
+    transition: 0.13s ease-in
 }
 
 .cta-header:hover {
     cursor: pointer;
+    background-color: #3f95ff
 }
 
 @media screen and (max-width: 768px) {
