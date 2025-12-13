@@ -1,0 +1,903 @@
+/* =================================================
+  CSS organizado e comentado para:
+   - card4line (grid de 4) e responsivo -> carousel
+   - cardwide (cards horizontais grandes)
+  Arquivo: cards.css
+================================================= */
+
+/* =================================================
+   CARD4LINE (LINHA COM 4)
+   - Dimensões de referência:
+     Card:     300 x 261
+     Imagem:   300 x 147
+     Conteúdo: 300 x 114
+   - Variáveis para fácil ajuste por projeto
+================================================= */
+
+/* -----------------------
+   VARIÁVEIS GLOBAIS
+-------------------------*/
+:root {
+  /* cores */
+  --card4line-bg: #2a2a2a;
+  --card4line-text: #ebebeb;
+  --card4line-muted: #9ca3af;
+  --card4line-success: #00a688;
+  --card4line-badge-bg: #00a688;
+
+  /* radius */
+  --card4line-radius: 12px;
+
+  /* fontes (conforme pedido) */
+  --card4line-titulo-font-size: 18px;
+  --card4line-desconto-font-size: 12px;
+  --card4line-preco-font-size: 14px;
+  --card4line-preco-desconto-font-size: 14px;
+
+  /* espaçamentos */
+  --card4line-conteudo-padding: 12px;
+  --card4line-gap-desktop: 20px; /* espaçamento horizontal entre colunas */
+  --card4line-row-gap: 20px; /* espaçamento vertical entre linhas (pode ser sobrescrito via JS) */
+  --card4line-gap-carousel: 16px;
+
+  /* dimensões dos cards */
+  --card4line-card-width-desktop: 300px;
+  --card4line-card-height-desktop: 261px;
+  --card4line-card-width-tablet: 260px;
+  --card4line-card-width-mobile: 250px;
+
+  /* imagem */
+  --card4line-image-height: 147px;
+
+  /* área de conteúdo */
+  --card4line-conteudo-height: 114px;
+
+  /* peek (carousel) */
+  --card4line-peek-left: 16px;
+  --card4line-peek-right: 48px;
+}
+
+/* -----------------------
+   GRID DESKTOP
+-------------------------*/
+#card4line,
+.card4line {
+  display: grid;
+  grid-template-columns: repeat(4, var(--card4line-card-width-desktop));
+  grid-column-gap: var(--card4line-gap-desktop);
+  grid-row-gap: var(--card4line-row-gap);
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+/* -----------------------
+   CARD - 300 x 261
+-------------------------*/
+.card4line-card {
+  width: var(--card4line-card-width-desktop); /* 300 */
+  height: var(--card4line-card-height-desktop); /* 261 */
+  background: var(--card4line-bg);
+  color: var(--card4line-text);
+  border-radius: var(--card4line-radius);
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+  transition: transform 0.22s ease;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+/* hover */
+.card4line-card:hover {
+  transform: translateY(-6px);
+}
+
+/* -----------------------
+   IMAGEM - 300 x 147
+-------------------------*/
+.card4line-imagem {
+  width: 100%;
+  height: var(--card4line-image-height); /* 147 */
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: var(--card4line-radius);
+  border-top-right-radius: var(--card4line-radius);
+}
+
+/* -----------------------
+   CONTEÚDO - 300 x 114
+-------------------------*/
+.card4line-conteudo {
+  width: var(--card4line-card-width-desktop); /* 300 */
+  height: var(--card4line-conteudo-height); /* 114 */
+  padding: var(--card4line-conteudo-padding);
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* -----------------------
+   TÍTULO    - 2 linhas no máximo, alinhado no topo
+-------------------------*/
+.card4line-jogo-titulo {
+  font-size: var(--card4line-titulo-font-size); /* 18px */
+  font-weight: 700;
+  color: var(--card4line-text);
+  line-height: 1.2;
+  margin: 0 0 4px;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* até 2 linhas */
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+/* -----------------------
+   DESCONTO (badge) - centralizado na sua "faixa"
+-------------------------*/
+.card4line-jogo-desconto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4px 12px;
+  min-height: 24px;
+
+  background: var(--card4line-badge-bg);
+  border-radius: 6px;
+
+  font-size: var(--card4line-desconto-font-size); /* 16px */
+  font-weight: 700;
+  color: #000;
+
+  margin-top: 4px;
+}
+
+/* -----------------------
+   PREÇOS
+   - bloco encaixado na parte inferior
+-------------------------*/
+.card4line-jogo-precos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto; /* empurra para base do conteúdo */
+}
+
+/* preço original (riscado) */
+.card4line-jogo-preco {
+  font-size: var(--card4line-preco-font-size); /* 18px */
+  color: var(--card4line-muted);
+  text-decoration: line-through;
+  margin: 0;
+}
+
+/* preço com desconto (ou preço único / "Grátis") */
+.card4line-jogo-preco-desconto {
+  font-size: var(--card4line-preco-desconto-font-size); /* 16px */
+  color: var(--card4line-success);
+  font-weight: 700;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* utilitário */
+.text-line-through {
+  text-decoration: line-through;
+}
+
+/* -----------------------
+   CAROUSEL WRAPPER (MOBILE)
+-------------------------*/
+#card4lineCarouselWrapper,
+.card4lineCarouselWrapper {
+  display: none;
+  width: 100%;
+}
+
+/* container do carousel */
+.card4line-carousel {
+  padding-bottom: 12px;
+  overflow: visible;
+}
+
+/* track com peek */
+.card4line-carousel .carousel-inner {
+  display: flex;
+  gap: var(--card4line-gap-carousel);
+  align-items: flex-start;
+  padding-left: var(--card4line-peek-left);
+  padding-right: var(--card4line-peek-right);
+  box-sizing: border-box;
+}
+
+/* item do carousel (cada card) */
+.card4line-carousel .card4line-carousel-item {
+  flex: 0 0 auto;
+  width: var(--card4line-card-width-tablet);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  border-radius: var(--card4line-radius);
+  overflow: visible;
+}
+
+/* card interno mantém radius */
+.card4line-carousel .card4line-carousel-item .card4line-card {
+  border-radius: var(--card4line-radius);
+  width: 100%;
+  overflow: hidden;
+}
+
+/* remove setas se existirem */
+.card4line-carousel .carousel-control-prev,
+.card4line-carousel .carousel-control-next {
+  display: none !important;
+}
+
+/* cursor ao arrastar */
+.card4line-carousel .carousel-inner.dragging,
+.card4line-card.dragging {
+  cursor: grabbing;
+}
+/* card clicável */
+.card4line-link-wrapper {
+  text-decoration: none;
+  color: inherit !important;
+  display: block;
+}
+
+.card4line-link-wrapper:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* -----------------------
+   RESPONSIVO
+-------------------------*/
+@media (max-width: 1024px) {
+  #card4line,
+  .card4line {
+    display: none;
+  }
+
+  #card4lineCarouselWrapper,
+  .card4lineCarouselWrapper {
+    display: block;
+  }
+
+  .card4line-carousel .carousel-inner {
+    padding-left: var(--card4line-peek-left);
+    padding-right: var(--card4line-peek-right);
+  }
+
+  .card4line-carousel .card4line-carousel-item {
+    width: var(--card4line-card-width-tablet);
+  }
+
+  /* em tablet, mantemos mesmo ratio (ajuste se quiser exato 300x261 também aqui) */
+  .card4line-card {
+    width: var(--card4line-card-width-tablet);
+    height: auto; /* para não estourar lateral */
+  }
+
+  .card4line-conteudo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card4line-carousel .carousel-inner {
+    padding-left: calc(var(--card4line-peek-left) - 2px);
+    padding-right: calc(var(--card4line-peek-right) - 4px);
+  }
+
+  .card4line-carousel .card4line-carousel-item {
+    width: var(--card4line-card-width-mobile);
+  }
+
+  .card4line-card {
+    width: var(--card4line-card-width-mobile);
+    height: auto;
+  }
+
+  .card4line-conteudo {
+    width: 100%;
+  }
+}
+
+/* esconder scrollbar (webkit) */
+.card4line-carousel .carousel-inner::-webkit-scrollbar {
+  display: none;
+}
+
+/* =================================================
+   CARDWIDE (CARTÃO HORIZONTAL GRANDE)
+   - Estrutura, variáveis e regras para alinhamento de preços
+   - Quando houver PREÇO ANTIGO + PREÇO COM DESCONTO,
+     ambos aparecem alinhados à esquerda, em sequência.
+================================================= */
+
+/* =========================
+   :root - Variáveis cardwide (pode consolidar com :root acima)
+   ========================= */
+:root {
+  --cardwide-card-h-base: 213px;
+  --cardwide-card-padding-base: 18px;
+
+  --cardwide-fs-title-base: 22px;
+  --cardwide-fs-desc-base: 16px;
+  --cardwide-fs-gen-base: 16px;
+  --cardwide-fs-price-base: 20px;
+
+  --cardwide-card-h: var(--cardwide-card-h-base);
+  --cardwide-card-padding: var(--cardwide-card-padding-base);
+  --cardwide-fs-title: var(--cardwide-fs-title-base);
+  --cardwide-fs-desc: var(--cardwide-fs-desc-base);
+  --cardwide-fs-gen: var(--cardwide-fs-gen-base);
+  --cardwide-fs-price: var(--cardwide-fs-price-base);
+
+  --cardwide-accent-green: #00a688;
+  --cardwide-discount-red: #00a688;
+  --cardwide-old-price-gray: #b4b4b4;
+  --cardwide-muted: rgb(212, 212, 212);
+
+  --cardwide-radius: 12px;
+  --cardwide-text-shadow-strong: 0 2px 4px rgba(0, 0, 0, 0.95);
+  --cardwide-box-shadow: 0 10px 30px rgba(100, 100, 100, 0.6), 0 4px 14px rgba(2, 6, 23, 0.6);
+}
+
+/* =========================
+   Base da página
+   ========================= */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #081018 0%, #0b1320 100%);
+  color: #fff;
+  font-family: "Lexend", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+main.container {
+  max-width: calc(var(--cardwide-card-h-base) * 6 + 64px);
+  margin: 0 auto;
+}
+
+/* =========================
+   Estrutura cardwide
+   ========================= */
+.cardwide {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.cardwide-item-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cardwide-link {
+  display: block;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================
+   Article card (imagem de fundo)
+   ========================= */
+.cardwide-item {
+  width: 100%;
+  max-width: calc(var(--cardwide-card-h-base) * 6);
+  height: var(--cardwide-card-h);
+  border-radius: var(--cardwide-radius);
+  overflow: hidden;
+  position: relative;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: var(--cardwide-box-shadow);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+.cardwide-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 46px rgba(0, 0, 0, 0.7);
+}
+
+.cardwide-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.25) 45%, rgba(0, 0, 0, 0.05) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* =========================
+   Card body (texto sobre imagem)
+   ========================= */
+.cardwide-body {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: var(--cardwide-card-padding);
+  box-sizing: border-box;
+  color: #fff;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.12) 18%, rgba(0, 0, 0, 0.32) 40%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+/* =========================
+   Conteúdo (título, desc, genero, preço)
+   ========================= */
+.cardwide-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 0;
+  flex: 1 1 auto;
+  box-sizing: border-box;
+}
+
+.cardwide-title {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: var(--cardwide-fs-title);
+  margin: 0;
+  color: #eaf6ff;
+  line-height: 1.05;
+  text-shadow: var(--cardwide-text-shadow-strong);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardwide-desc {
+  font-size: var(--cardwide-fs-desc);
+  margin: 0;
+  color: var(--cardwide-muted);
+  line-height: 1.25;
+  text-shadow: var(--cardwide-text-shadow-strong);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Gênero */
+.cardwide-genre-wrap {
+  margin-top: 6px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.cardwide-genre-badge {
+  display: inline-flex;
+  font-size: calc(var(--cardwide-fs-gen) * 0.95);
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: rgba(170, 170, 170, 0.377);
+  color: #ffdfdf;
+  font-weight: 600;
+  text-shadow: var(--cardwide-text-shadow-strong);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =========================
+PRICE BLOCK — agora alinhado à ESQUERDA quando ambos existirem
+========================= */
+.cardwide-price-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; /* <-- alinhamento à esquerda solicitado */
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+/* PREÇO ANTIGO (lado esquerdo, cinza) */
+.cardwide-item .preco-antigo {
+  color: var(--cardwide-old-price-gray) !important; /* #2C2C2C */
+  font-size: var(--cardwide-fs-price);
+  text-decoration: line-through;
+  opacity: 1;
+  margin: 0;
+  text-shadow: none !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* PREÇO COM DESCONTO / PREÇO FINAL (logo à direita do antigo; ambos à esquerda do card) */
+.cardwide-item .preco-desconto {
+  color: var(--cardwide-accent-green) !important; /* #00A688 */
+  font-weight: 800;
+  font-size: var(--cardwide-fs-price);
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(153, 153, 153, 0.45);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Quando só há um item no bloco de preço (somente preco_desconto), mantém-se alinhado à esquerda */
+.cardwide-price-block > :only-child {
+  justify-self: start;
+}
+
+/* =========================
+   DISCOUNT BADGE (top-right)
+   ========================= */
+.cardwide-discount-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--cardwide-discount-red);
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  z-index: 6;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
+  border: none;
+}
+
+/* =========================
+   SR-ONLY
+   ========================= */
+.cardwide-sr-only,
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* =========================
+   VISUAL / LEGIBILITY
+   ========================= */
+.cardwide-title,
+.cardwide-desc,
+.cardwide-genre-badge,
+.cardwide-item .preco-desconto,
+.cardwide-item .preco-antigo {
+  text-shadow: var(--cardwide-text-shadow-strong);
+}
+
+/* =========================
+   MEDIA QUERIES - responsividade
+========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  :root {
+    --cardwide-card-h: calc(var(--cardwide-card-h-base) * 0.85);
+    --cardwide-card-padding: calc(var(--cardwide-card-padding-base) * 0.85);
+    --cardwide-fs-title: calc(var(--cardwide-fs-title-base) * 0.9);
+    --cardwide-fs-desc: calc(var(--cardwide-fs-desc-base) * 0.94);
+    --cardwide-fs-gen: calc(var(--cardwide-fs-gen-base) * 0.88);
+    --cardwide-fs-price: calc(var(--cardwide-fs-price-base) * 0.9);
+  }
+
+  .cardwide-item {
+    height: var(--cardwide-card-h);
+    max-height: var(--cardwide-card-h);
+  }
+  .cardwide-body {
+    padding: var(--cardwide-card-padding);
+    gap: 10px;
+  }
+
+  .cardwide-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(var(--cardwide-card-h) - (var(--cardwide-card-padding) * 2));
+    max-height: calc(var(--cardwide-card-h) - (var(--cardwide-card-padding) * 2));
+    gap: 8px;
+    width: 100%;
+  }
+
+  .cardwide-title {
+    margin: 0;
+    flex: 0 0 auto;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--cardwide-fs-title);
+  }
+
+  .cardwide-desc {
+    flex: 0 0 auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    font-size: var(--cardwide-fs-desc);
+  }
+
+  .cardwide-genre-wrap {
+    flex: 0 0 auto;
+    gap: 6px;
+  }
+  .cardwide-price-block {
+    flex: 0 0 auto;
+    margin-top: 8px;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  :root {
+    --cardwide-card-h: calc(var(--cardwide-card-h-base) * 0.74);
+    --cardwide-card-padding: calc(var(--cardwide-card-padding-base) * 0.72);
+    --cardwide-fs-title: calc(var(--cardwide-fs-title-base) * 0.8);
+    --cardwide-fs-desc: calc(var(--cardwide-fs-desc-base) * 0.88);
+    --cardwide-fs-gen: calc(var(--cardwide-fs-gen-base) * 0.81);
+    --cardwide-fs-price: calc(var(--cardwide-fs-price-base) * 0.8);
+  }
+
+  .cardwide-item {
+    height: var(--cardwide-card-h);
+    max-height: var(--cardwide-card-h);
+  }
+  .cardwide-body {
+    padding: var(--cardwide-card-padding);
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .cardwide-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(var(--cardwide-card-h) - (var(--cardwide-card-padding) * 2));
+    max-height: calc(var(--cardwide-card-h) - (var(--cardwide-card-padding) * 2));
+    gap: 8px;
+    width: 100%;
+  }
+
+  .cardwide-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
+    font-size: var(--cardwide-fs-title);
+    line-height: 1.08;
+  }
+
+  .cardwide-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
+    font-size: var(--cardwide-fs-desc);
+  }
+
+  .cardwide-genre-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    max-width: 100%;
+  }
+  .cardwide-genre-badge {
+    font-size: var(--cardwide-fs-gen);
+    padding: 5px 7px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* no mobile, permite wrap controlado do bloco de preços para manter legibilidade */
+  .cardwide-price-block {
+    margin-top: 6px;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .cardwide-discount-badge {
+    top: 10px;
+    right: 10px;
+    padding: 5px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra small */
+@media (max-width: 420px) {
+  :root {
+    --cardwide-card-h: calc(var(--cardwide-card-h-base) * 0.66);
+    --cardwide-card-padding: calc(var(--cardwide-card-padding-base) * 0.6);
+    --cardwide-fs-title: calc(var(--cardwide-fs-title-base) * 0.75);
+    --cardwide-fs-desc: calc(var(--cardwide-fs-desc-base) * 0.81);
+    --cardwide-fs-gen: calc(var(--cardwide-fs-gen-base) * 0.75);
+    --cardwide-fs-price: calc(var(--cardwide-fs-price-base) * 0.75);
+  }
+
+  .cardwide-item {
+    height: var(--cardwide-card-h);
+    max-height: var(--cardwide-card-h);
+  }
+  .cardwide-body {
+    padding: var(--cardwide-card-padding);
+    gap: 6px;
+  }
+
+  .cardwide-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(var(--cardwide-card-h) - (var(--cardwide-card-padding) * 2));
+    max-height: calc(var(--cardwide-card-h) - (var(--cardwide-card-padding) * 2));
+    gap: 6px;
+    width: 100%;
+  }
+
+  .cardwide-title {
+    -webkit-line-clamp: 1;
+    font-size: var(--cardwide-fs-title);
+  }
+  .cardwide-desc {
+    -webkit-line-clamp: 2;
+    font-size: var(--cardwide-fs-desc);
+  }
+  .cardwide-genre-wrap {
+    gap: 5px;
+  }
+  .cardwide-price-block {
+    margin-top: 4px;
+    gap: 6px;
+  }
+}
+
+/* =========================
+   Safety patches: garante visibilidade e cores
+   ========================= */
+.cardwide-genre-wrap,
+.cardwide-price-block,
+.cardwide-genre-badge,
+.cardwide-item .preco-desconto,
+.cardwide-item .preco-antigo {
+  display: flex !important;
+  align-items: center !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.cardwide-genre-badge {
+  display: inline-flex !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardwide-content {
+  min-height: 1px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 720px) {
+  .cardwide-body {
+    align-items: flex-start;
+  }
+  .cardwide-price-block {
+    margin-top: 8px;
+    justify-content: flex-start;
+  }
+  .cardwide-genre-wrap {
+    margin-top: 6px;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .cardwide-item,
+  .cardwide-item * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .cardwide-genre-wrap,
+  .cardwide-price-block {
+    transform: none !important;
+    opacity: 1 !important;
+    z-index: 5 !important;
+  }
+}
+
+/* Força cores finais (prioridade) */
+:root {
+  --cardwide-accent-green: #00a688;
+  --cardwide-discount-red: #00a688;
+}
+
+.cardwide-item .preco-desconto {
+  color: var(--cardwide-accent-green) !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+}
+.cardwide-item .cardwide-discount-badge {
+  background: var(--cardwide-discount-red) !important;
+  color: #fff !important;
+}
+.cardwide-item .preco-antigo {
+  color: var(--cardwide-old-price-gray) !important;
+  text-shadow: none !important;
+}
+
+/* acessibilidade: foco visível */
+.cardwide-link:focus .cardwide-item {
+  box-shadow: 0 0 0 3px rgba(0, 166, 136, 0.12), 0 16px 46px rgba(0, 0, 0, 0.7);
+}
+.cardwide-link:focus .preco-desconto,
+.cardwide-link:focus .preco-antigo,
+.cardwide-link:focus .cardwide-discount-badge {
+  outline: 2px solid rgba(0, 166, 136, 0.14);
+  outline-offset: 2px;
+}
+
+/* utilitários finais */
+.cardwide-title,
+.cardwide-desc,
+.cardwide-genre-badge,
+.cardwide-item .preco-desconto,
+.cardwide-item .preco-antigo {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+.cardwide-price-block > * {
+  min-width: 0;
+}
+
+/* =========================
+   FIM DO CSS
+   ========================= */
