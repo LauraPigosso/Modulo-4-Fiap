@@ -621,3 +621,45 @@ button {
   outline: 3px solid white;
   outline-offset: -3px;
 }
+
+@media screen and (max-width: 768px){
+  #hero-section{
+    background-position: 55% 0;
+    padding: 5rem 0;
+  }
+}
+
+@media screen and (max-width: 576px){
+  #hero-section{
+    padding: 4rem 0;
+  }
+
+  #hero__alinharConteudo{
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  #hero__alinharConteudo h1{
+    font-size: 1.5rem;
+  }
+
+
+  #hero__alinharCta{
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .hero__cta{
+    width: 100%;
+    font-size: 14px;
+    padding: 6px 0;
+  }
+
+  #hero__contraste{
+      width: 100%;
+      top: 10%;
+      background: linear-gradient(to top, rgba(23, 23, 23, 0.7), #3c3c3c00);
+
+  }
+}

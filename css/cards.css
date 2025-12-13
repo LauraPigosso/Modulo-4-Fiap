@@ -357,10 +357,6 @@
    ========================= */
 html,
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(180deg, #081018 0%, #0b1320 100%);
   color: #fff;
   font-family: "Lexend", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
   -webkit-font-smoothing: antialiased;
