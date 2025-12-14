@@ -71,22 +71,28 @@ header {
 
 
 #menu-mobile-aberto {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
     background: rgba(30, 30, 30, 0.7);
     backdrop-filter: blur(15px);
     color: #FFF;
-    position: fixed;
     z-index: 99999;
     inset: 0;
     padding: 2rem;
-    display: none;
-    justify-content: center;
-    align-items: center;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
 }
 
 #menu-mobile-aberto.ativo {
-    display: flex;
-    transition: 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 #menu-mobile__fechar {
@@ -134,7 +140,12 @@ header nav ul {
     background-color: #3f95ff
 }
 
-#footer__logotipo{
+#link-footer-logo{
+        margin-bottom: 12px;
+    }
+
+#footer__logotipo {
+    margin: 0 !important;
     width: 75%;
 }
 
@@ -147,7 +158,8 @@ header nav ul {
         display: flex;
     }
 
-    #footer__logotipo{
-    width: 60%;
-}
+    #footer__logotipo {
+        width: 60%;
+    }
+    
 }
