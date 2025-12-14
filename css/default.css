@@ -134,6 +134,10 @@ header nav ul {
     background-color: #3f95ff
 }
 
+#footer__logotipo{
+    width: 75%;
+}
+
 @media screen and (max-width: 768px) {
     .nav-desktop {
         display: none;

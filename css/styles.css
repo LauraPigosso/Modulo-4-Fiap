@@ -43,9 +43,11 @@ body {
 body.font-inter {
   font-family: var(--texto-textos) !important;
 }
+
 body.font-lexend {
   font-family: "Lexend", sans-serif !important;
 }
+
 body.font-baloo {
   font-family: "Baloo Da 2", cursive;
 }
@@ -54,12 +56,17 @@ body.font-baloo {
 html.text-size-normal {
   font-size: 16px;
 }
+
 html.text-size-medio {
   font-size: 18px;
-} /* Aumenta 12.5% */
+}
+
+/* Aumenta 12.5% */
 html.text-size-grande {
   font-size: 20px;
-} /* Aumenta 25% */
+}
+
+/* Aumenta 25% */
 
 /*---------------- 
 Variações Visuais 
@@ -72,12 +79,14 @@ Alto Contraste
 body.alto-contraste {
   background: var(--escuro-bg-principal);
 }
+
 body.alto-contraste * {
   background-color: var(--claro-texto-principal);
   color: var(--claro-bg-secundario);
   box-shadow: none;
   text-shadow: none;
 }
+
 body.alto-contraste a,
 body.alto-contraste button {
   outline: 2px solid var(--azul-cta);
@@ -106,6 +115,7 @@ Monocromático (Escala de cinza)
 body.monocromatico {
   filter: grayscale(100%);
 }
+
 body.monocromatico .a11y-floating,
 body.monocromatico .a11y-main-btn {
   filter: none !important;
@@ -124,9 +134,12 @@ body.modo-claro {
 body.modo-claro .link-navegacao-ativo,
 body.modo-claro .link-navegacao,
 body.modo-claro .usuario-nome,
-body.modo-claro .titulo-secao, /* Promoções / Explorar por Categoria / Novos e notaveis */
-body.modo-claro .barra-lateral h2, /* Marcadores */
-body.modo-claro .item-barra, /* Links da barra lateral */
+body.modo-claro .titulo-secao,
+/* Promoções / Explorar por Categoria / Novos e notaveis */
+body.modo-claro .barra-lateral h2,
+/* Marcadores */
+body.modo-claro .item-barra,
+/* Links da barra lateral */
 body.modo-claro .nome-jogo,
 body.modo-claro .descricao-jogo,
 body.modo-claro .descricao-lista,
@@ -162,7 +175,8 @@ body.modo-claro .barra-cabecalho {
 }
 
 body.modo-claro .preco-original {
-  color: var(--claro-texto-secundario); /* Um pouco mais claro para a cor riscada */
+  color: var(--claro-texto-secundario);
+  /* Um pouco mais claro para a cor riscada */
 }
 
 body.modo-claro .banner-festival,
@@ -266,30 +280,6 @@ img.icone {
   background: var(--escuro-bg-secundario);
 }
 
-/* BANNER DO FESTIVAL (Estrutura e Posicionamento) */
-.banner-festival {
-  position: relative;
-  height: 215px; /* Altura FIXA para a imagem 460x215 */
-  background: none; /* Removido o background degradê */
-  border-radius: 8px;
-  padding: 40px;
-  text-align: center;
-  margin-bottom: 30px;
-  overflow: hidden;
-}
-
-/* IMAGEM DE FUNDO DO BANNER */
-.imagem-banner-fundo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; /* Preenche a largura total */
-  height: 100%; /* Preenche a altura total */
-  object-fit: cover; /* Garante que a imagem preencha o espaço sem deformar (corta o excesso) */
-  z-index: 1; /* Coloca a imagem no fundo */
-  opacity: 0.8; /* Adiciona leve transparência para o texto se destacar */
-}
-
 .barra-lateral {
   background: var(--escuro-bg-secundario);
 }
@@ -307,26 +297,6 @@ img.icone {
 .item-barra:hover {
   background-color: var(--escuro-bg-principal);
   color: var(--escuro-texto-principal);
-}
-
-.titulo-secao {
-  color: var(--escuro-texto-principal);
-}
-
-/* Seção Iara Games Deck */
-.secao-deck {
-  background-image: url("../assets/page/bg_secao_deck.png"); /* Imagem de fundo */
-  background-size: cover;
-  background-position: center;
-  background-color: #1a9fd9; /* Cor de fallback */
-  border-radius: 8px;
-  min-height: 120px;
-}
-
-/* Seção de Descontos */
-
-.mais-jogos {
-  color: var(--azul-cta);
 }
 
 /* Cars   */
@@ -434,10 +404,12 @@ img.icone {
 /* Botão Principal: Posição Fixa na Borda Direita */
 .a11y-main-btn {
   position: fixed;
-  top: 80%; /* Ajustado conforme solicitado */
+  top: 80%;
+  /* Ajustado conforme solicitado */
   right: 0;
   transform: translateY(-50%);
-  z-index: 1001; /* Acima do painel */
+  z-index: 1001;
+  /* Acima do painel */
 
   background: var(--azul-cta);
   border: none;
@@ -621,44 +593,52 @@ button {
   box-shadow: inset 0 0 0 3px #FFF;
 }
 
-@media screen and (max-width: 768px){
-  #hero-section{
+
+
+@media screen and (max-width: 1024px) {
+  .padding-p {
+    padding-left: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #hero-section {
     background-position: 55% 0;
     padding: 5rem 0;
   }
 }
 
-@media screen and (max-width: 576px){
-  #hero-section{
+@media screen and (max-width: 576px) {
+  #hero-section {
     padding: 4rem 0;
   }
 
-  #hero__alinharConteudo{
+  #hero__alinharConteudo {
     text-align: center;
     align-items: center;
     margin: 0 auto;
   }
 
-  #hero__alinharConteudo h1{
+  #hero__alinharConteudo h1 {
     font-size: 1.5rem;
   }
 
 
-  #hero__alinharCta{
+  #hero__alinharCta {
     flex-direction: column;
     width: 90%;
   }
 
-  .hero__cta{
+  .hero__cta {
     width: 100%;
     font-size: 14px;
     padding: 6px 0;
   }
 
-  #hero__contraste{
-      width: 100%;
-      top: 10%;
-      background: linear-gradient(to top, rgba(23, 23, 23, 0.7), #3c3c3c00);
+  #hero__contraste {
+    width: 100%;
+    top: 10%;
+    background: linear-gradient(to top, rgba(23, 23, 23, 0.7), #3c3c3c00);
 
   }
 }

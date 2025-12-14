@@ -119,13 +119,13 @@
     </section>
     <!-- Seção de Promoções e Eventos -->
     <section class="container mt-4 mb-4" aria-labelledby="titulo-promocoes">
-      <div class="d-flex justify-content-between align-items-center mb-3">
+      <div class="d-flex justify-content-between align-items-center mb-3 padding-p">
         <h2 id="titulo-promocoes" class="mt-3 fw-bold text-uppercase titulo-secao">Promoções e Eventos</h2>
         <a href="#" class="fs-6">VER MAIS</a>
       </div>
 
       <!-- card4line com Cards automatizados por json e js-->
-      <p class="text-categoria text-uppercase text-start ml-3">Rpg</p>
+      <p class="text-categoria text-uppercase text-start ml-3 padding-p">Rpg</p>
       <section class="card4line mb-3">
         <div id="baldurs_gate_3"></div>
         <div id="elden_ring"></div>
@@ -137,7 +137,7 @@
         <div id="the_elder_scrolls_online"></div>
       </section>
 
-      <p class="text-categoria text-uppercase text-white text-start ml-3">Simulação</p>
+      <p class="text-categoria text-uppercase text-white text-start ml-3 padding-p">Simulação</p>
 
       <section class="card4line mb-3">
         <div id="cities_skylines"></div>
@@ -146,7 +146,7 @@
         <div id="planet_coaster"></div>
       </section>
 
-      <p class="text-categoria text-uppercase text-white text-start ml-3">Ação</p>
+      <p class="text-categoria text-uppercase text-white text-start ml-3 padding-p">Ação</p>
 
       <section class="card4line mb-3">
         <div id="for_honor"></div>
@@ -246,12 +246,10 @@
     <div class="container">
       <div class="row gy-4 text-center justify-content-center">
         <!-- Marca e contato -->
-        <div class="col-12 col-md-4">
-          <a href="#topo" class="d-inline-flex align-items-center mb-3 text-decoration-none"
+        <div class="col-12 col-md-4 d-flex flex-column align-items-center">
+          <a href="#topo" class="d-flex justify-content-center align-items-center mb-3 text-decoration-none"
             aria-label="Página inicial da Iara Games">
-            <img src="assets/logotipo.png" alt="Logotipo da Iara Games" class="img-fluid me-2" width="100"
-              height="100" />
-            <span class="fs-5 fw-semibold texto-footer">Iara Games</span>
+            <img id="footer__logotipo" src="assets/logotipo.png" alt="Logotipo da Iara Games" class="img-fluid me-2" />
           </a>
 
           <p class="mb-2 texto-footer">Jogos que conectam pessoas</p>
