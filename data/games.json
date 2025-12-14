@@ -20,6 +20,7 @@
     "imagem_header": "/assets/imagens/baldurs_gate_3/baldurs_gate_3_header.jpg",
     "imagem_capsule": "/assets/imagens/baldurs_gate_3/baldurs_gate_3_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/baldurs_gate_3/baldurs_gate_3_caroussel.jpg",
+    "alt": "A imagem mostra 3 pessoas, sendo os 3 guerreiros, um homem branco com a mão estendida, um homem negro e uma mulher branca com uma katana. Os fundo é azul e apresenta o nome do game",
     "pagina_loja": "pages/sites/sites/baldurs_gate_3.html"
   },
   {
@@ -43,6 +44,7 @@
     "imagem_header": "/assets/imagens/call_of_duty_modern_warfare_ii/call_of_duty_modern_warfare_ii_header.jpg",
     "imagem_capsule": "/assets/imagens/call_of_duty_modern_warfare_ii/call_of_duty_modern_warfare_ii_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/call_of_duty_modern_warfare_ii/call_of_duty_modern_warfare_ii_caroussel.jpg",
+    "alt": "Um homem mascarado semelhante a uma caveira olhando direto a camera", 
     "pagina_loja": "pages/sites/call_of_duty_modern_warfare_ii.html"
   },
   {
@@ -66,6 +68,7 @@
     "imagem_header": "/assets/imagens/cities_skylines/cities_skylines_header.jpg",
     "imagem_capsule": "/assets/imagens/cities_skylines/cities_skylines_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/cities_skylines/cities_skylines_caroussel.jpg",
+    "alt": "Nome do game em azul ao fundo de uma cidade", 
     "pagina_loja": "pages/sites/cities_skylines.html"
   },
   {
@@ -89,6 +92,7 @@
     "imagem_header": "/assets/imagens/cuphead/cuphead_header.jpg",
     "imagem_capsule": "/assets/imagens/cuphead/cuphead_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/cuphead/cuphead_caroussel.jpg",
+    "alt": "Dois personagens cartoon com cabeças de xicara abraçados em um fundo amarelo", 
     "pagina_loja": "pages/sites/cuphead.html"
   },
   {
@@ -112,6 +116,7 @@
     "imagem_header": "/assets/imagens/elden_ring/elden_ring_header.jpg",
     "imagem_capsule": "/assets/imagens/elden_ring/elden_ring_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/elden_ring/elden_ring_caroussel.jpg",
+    "alt": "A imagem mostra 4 aneis dourados entrelaçados com um corte dourando ao meio, o nome do game esta abaixo dos aneis em um fundo de ceú nubrado", 
     "pagina_loja": "pages/sites/elden_ring.html"
   },
   {
@@ -135,6 +140,7 @@
     "imagem_header": "/assets/imagens/euro_truck_simulator_2/euro_truck_simulator_2_header.jpg",
     "imagem_capsule": "/assets/imagens/euro_truck_simulator_2/euro_truck_simulator_2_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/euro_truck_simulator_2/euro_truck_simulator_2_caroussel.jpg",
+    "alt": "Um caminhão da marca SCANIA avançado no horizonte rural",
     "pagina_loja": "pages/sites/euro_truck_simulator_2.html"
   },
   {
@@ -158,6 +164,7 @@
     "imagem_header": "/assets/imagens/fallout_76/fallout_76_header.jpg",
     "imagem_capsule": "/assets/imagens/fallout_76/fallout_76_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/fallout_76/fallout_76_caroussel.jpg",
+    "alt": "Uma mascara anti-radiação futurista no chão junto a cristais verdes florescentes, ao lado, o nome do game junto aos mesmos cristais",
     "pagina_loja": "pages/sites/fallout_76.html"
   },
   {
@@ -181,6 +188,7 @@
     "imagem_header": "/assets/imagens/for_honor/for_honor_header.jpg",
     "imagem_capsule": "/assets/imagens/for_honor/for_honor_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/for_honor/for_honor_caroussel.jpg",
+    "alt": "3 guerreiros com armaduras e machados de ferros em posição de ataque para a camera, o nome do game abaixo dos 3",
     "pagina_loja": "pages/sites/for_honor.html"
   },
   {
@@ -204,6 +212,7 @@
     "imagem_header": "/assets/imagens/forza_horizon_5/forza_horizon_5_header.jpg",
     "imagem_capsule": "/assets/imagens/forza_horizon_5/forza_horizon_5_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/forza_horizon_5/forza_horizon_5_caroussel.jpg",
+    "alt": "Dois carros apostando corrida em um horizonte praiano, sendo um vermelho de luxo, e um geeb verde",
     "pagina_loja": "pages/sites/forza_horizon_5.html"
   },
   {
@@ -227,6 +236,7 @@
     "imagem_header": "/assets/imagens/god_of_war/god_of_war_header.jpg",
     "imagem_capsule": "/assets/imagens/god_of_war/god_of_war_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/god_of_war/god_of_war_caroussel.jpg",
+    "alt": "A imagem mostra o nome do game junto a logoicone com um fundo de uma cachoeira e um lago",
     "pagina_loja": "pages/sites/god_of_war.html"
   },
   {
@@ -250,6 +260,7 @@
     "imagem_header": "/assets/imagens/grand_theft_auto_v/grand_theft_auto_v_header.jpg",
     "imagem_capsule": "/assets/imagens/grand_theft_auto_v/grand_theft_auto_v_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/grand_theft_auto_v/grand_theft_auto_v_caroussel.jpg",
+    "alt": "Uma mulher branca de cabelos castanhos e roupa roxa com um fundo praiano",
     "pagina_loja": "pages/sites/grand_theft_auto_v.html"
   },
   {
@@ -273,6 +284,7 @@
     "imagem_header": "/assets/imagens/horizon_zero_dawn_complete_edition/horizon_zero_dawn_complete_edition_header.jpg",
     "imagem_capsule": "/assets/imagens/horizon_zero_dawn_complete_edition/horizon_zero_dawn_complete_edition_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/horizon_zero_dawn_complete_edition/horizon_zero_dawn_complete_edition_caroussel.jpg",
+    "alt": "Uma mulher branca de cabelos castanhos e roupa de pele com um fundo de céu roxo e azul",
     "pagina_loja": "pages/sites/horizon_zero_dawn_complete_edition.html"
   },
   {
@@ -296,6 +308,7 @@
     "imagem_header": "/assets/imagens/kingdom_come_deliverance/kingdom_come_deliverance_header.jpg",
     "imagem_capsule": "/assets/imagens/kingdom_come_deliverance/kingdom_come_deliverance_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/kingdom_come_deliverance/kingdom_come_deliverance_caroussel.jpg",
+    "alt": "Um guerreiro branco de armadura apoiado em sua espada de ferro, o nome do jogo esta em branco a frente da cena",
     "pagina_loja": "pages/sites/kingdom_come_deliverance.html"
   },
   {
@@ -319,6 +332,7 @@
     "imagem_header": "/assets/imagens/lost_ark/lost_ark_header.jpg",
     "imagem_capsule": "/assets/imagens/lost_ark/lost_ark_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/lost_ark/lost_ark_caroussel.jpg",
+    "alt": "Grupo de pessoas com armaduras coloridas e armas diverças, nome do jogo esta em sua tipografia e sua logotipo abaixo da cena.",
     "pagina_loja": "pages/sites/lost_ark.html"
   },
   {
@@ -342,7 +356,8 @@
     "paginas": ["https://www.youtube.com/flightsimulator", "https://x.com/MSFSofficial"],
     "imagem_header": "/assets/imagens/microsoft_flight_simulator/microsoft_flight_simulator_header.jpg",
     "imagem_capsule": "/assets/imagens/microsoft_flight_simulator/microsoft_flight_simulator_capsule.jpg",
-    "imagem_caroussel": "/assets/imagens/microsoft_flight_simulator/microsoft_flight_simulator_caroussel.jpg"
+    "imagem_caroussel": "/assets/imagens/microsoft_flight_simulator/microsoft_flight_simulator_caroussel.jpg",
+    "alt": "A imagem mostra 3 areas diferentes separadas por linhas triangulares, ao total há 4 aviões, o maior deles esta entre a primeira e a segunda paisagem, o nome do game se encontra no meio da primera paisagem"
   },
   {
     "id": "nba_2k23",
@@ -365,6 +380,7 @@
     "imagem_header": "/assets/imagens/nba_2k23/nba_2k23_header.jpg",
     "imagem_capsule": "/assets/imagens/nba_2k23/nba_2k23_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/nba_2k23/nba_2k23_caroussel.jpg",
+    "alt": "Um homem negro jogador de basquete com uma bola de basquete em sua mão direira realizando um movimento",
     "pagina_loja": "pages/sites/nba_2k23.html"
   },
   {
@@ -388,6 +404,7 @@
     "imagem_header": "/assets/imagens/new_world/new_world_header.jpg",
     "imagem_capsule": "/assets/imagens/new_world/new_world_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/new_world/new_world_caroussel.jpg",
+    "alt": "Nome do jogo em uma fonte merdieval em um fundo preto",
     "pagina_loja": "pages/sites/new_world.html"
   },
   {
@@ -411,6 +428,7 @@
     "imagem_header": "/assets/imagens/planet_coaster/planet_coaster_header.jpg",
     "imagem_capsule": "/assets/imagens/planet_coaster/planet_coaster_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/planet_coaster/planet_coaster_caroussel.jpg",
+    "alt": "Grupo de pessoas em uma montanha-russo rosa e branca, ao fundo é possivel ver um castelo e o restanta da montanha-russa",
     "pagina_loja": "pages/sites/planet_coaster.html"
   },
   {
@@ -434,6 +452,7 @@
     "imagem_header": "/assets/imagens/rocket_league/rocket_league_header.jpg",
     "imagem_capsule": "/assets/imagens/rocket_league/rocket_league_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/rocket_league/rocket_league_caroussel.jpg",
+    "alt": "Dois carros, um verde e azul e o outro rosa e azul, apostando corrida em um cenario futurista e colorico",
     "pagina_loja": "pages/sites/rocket_league.html"
   },
   {
@@ -457,6 +476,7 @@
     "imagem_header": "/assets/imagens/rust/rust_header.jpg",
     "imagem_capsule": "/assets/imagens/rust/rust_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/rust/rust_caroussel.jpg",
+    "alt": "Logotipo do game em vermelho ao logo do nome do game em branco com uma font quadriculada em um fundo preto",
     "pagina_loja": "pages/sites/rust.html"
   },
   {
@@ -480,6 +500,7 @@
     "imagem_header": "/assets/imagens/stardew_valley/stardew_valley_header.jpg",
     "imagem_capsule": "/assets/imagens/stardew_valley/stardew_valley_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/stardew_valley/stardew_valley_caroussel.jpg",
+    "alt": "Imagem de pixel-art de um cenario rural cercado com uma cerca, há uma galinha em cima da cerca e o nome do jogo acima da cerca",
     "pagina_loja": "pages/sites/stardew_valley.html"
   },
   {
@@ -503,6 +524,7 @@
     "imagem_header": "/assets/imagens/starfield/starfield_header.jpg",
     "imagem_capsule": "/assets/imagens/starfield/starfield_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/starfield/starfield_caroussel.jpg",
+    "alt": "No lado esquerdo, figuras em trajes espaciais são iluminadas por uma luz intensa e quente que emana da parte inferior, sugerindo o lançamento de uma nave ou uma fonte de energia. O fundo é um espaço sideral escuro e estrelado",
     "pagina_loja": "pages/sites/starfield.html"
   },
   {
@@ -526,6 +548,7 @@
     "imagem_header": "/assets/imagens/street_fighter_6/street_fighter_6_header.jpg",
     "imagem_capsule": "/assets/imagens/street_fighter_6/street_fighter_6_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/street_fighter_6/street_fighter_6_caroussel.jpg",
+    "alt": "Homem branco com espressão confiante em um uniforme de lutador, o homem faz um punho com a mão",
     "pagina_loja": "pages/sites/street_fighter_6.html"
   },
   {
@@ -549,6 +572,7 @@
     "imagem_header": "/assets/imagens/tekken_8/tekken_8_header.jpg",
     "imagem_capsule": "/assets/imagens/tekken_8/tekken_8_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/tekken_8/tekken_8_caroussel.jpg",
+    "alt": "Nome do jogo em uma fonte branca e semelhante a assiatica, contudo o '8' esta em vermelho na mesma fonte",
     "pagina_loja": "pages/sites/tekken_8.html"
   },
   {
@@ -572,6 +596,7 @@
     "imagem_header": "/assets/imagens/terraria/terraria_header.jpg",
     "imagem_capsule": "/assets/imagens/terraria/terraria_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/terraria/terraria_caroussel.jpg",
+    "alt": "Imagem de pixel-art de um cenario de foresta cercado por arvores e pessoas, o nome do jogo esta acima da cena",
     "pagina_loja": "pages/sites/terraria.html"
   },
   {
@@ -595,6 +620,7 @@
     "imagem_header": "/assets/imagens/the_elder_scrolls_online/the_elder_scrolls_online_header.jpg",
     "imagem_capsule": "/assets/imagens/the_elder_scrolls_online/the_elder_scrolls_online_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/the_elder_scrolls_online/the_elder_scrolls_online_caroussel.jpg",
+    "alt": " As figuras parecem ser guerreiros ou personagens do jogo, vestidos com armaduras. A figura central usa um capacete com chifres, enquanto as outras duas estão em cada lado, ligeiramente atrás.",
     "pagina_loja": "pages/sites/the_elder_scrolls_online.html"
   },
   {
@@ -618,6 +644,7 @@
     "imagem_header": "/assets/imagens/the_elder_scrolls_v_skyrim_special_edition/the_elder_scrolls_v_skyrim_special_edition_header.jpg",
     "imagem_capsule": "/assets/imagens/the_elder_scrolls_v_skyrim_special_edition/the_elder_scrolls_v_skyrim_special_edition_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/the_elder_scrolls_v_skyrim_special_edition/the_elder_scrolls_v_skyrim_special_edition_caroussel.jpg",
+    "alt": "Banner promocional do jogo, Skyrim Special Edition, com fundo preto, título central em branco e um elmo de guerreiro medieval à direita.",
     "pagina_loja": "pages/sites/the_elder_scrolls_v_skyrim_special_edition.html"
   },
   {
@@ -664,6 +691,7 @@
     "imagem_header": "/assets/imagens/the_witcher_3_wild_hunt/the_witcher_3_wild_hunt_header.jpg",
     "imagem_capsule": "/assets/imagens/the_witcher_3_wild_hunt/the_witcher_3_wild_hunt_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/the_witcher_3_wild_hunt/the_witcher_3_wild_hunt_caroussel.jpg",
+    "alt": "Homem branco e cabelos longos e brancos com armadura e segurando uma espada",
     "pagina_loja": "pages/sites/the_witcher_3_wild_hunt.html"
   },
   {
@@ -687,6 +715,7 @@
     "imagem_header": "/assets/imagens/train_simulator_classic/train_simulator_classic_header.jpg",
     "imagem_capsule": "/assets/imagens/train_simulator_classic/train_simulator_classic_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/train_simulator_classic/train_simulator_classic_caroussel.jpg",
+    "alt": "Placa com logotipo verde e branco ao centro e trens em movimento ao fundo, representando simulação ferroviária.",
     "pagina_loja": "pages/sites/train_simulator_classic.html"
   },
   {
@@ -710,6 +739,7 @@
     "imagem_header": "/assets/imagens/valheim/valheim_header.jpg",
     "imagem_capsule": "/assets/imagens/valheim/valheim_capsule.jpg",
     "imagem_caroussel": "/assets/imagens/valheim/valheim_caroussel.jpg",
+    "alt": "Logotipo em letras rúnicas alaranjadas e efeito de fogo sobre um fundo escuro, remetendo à mitologia nórdica e sobrevivência",
     "pagina_loja": "pages/sites/valheim.html"
   }
 ]

@@ -79,6 +79,7 @@
     const titulo = escapeHtml(jogo.titulo || "");
     const imagem = escapeHtml(jogo.imagem_header || "");
     const pagina = escapeHtml(jogo.pagina_loja || "#");
+    const alt = escapeHtml(jogo.alt || "")
 
     const descontoRaw = jogo.desconto;
     const temDesconto = hasDesconto(descontoRaw);
@@ -117,7 +118,7 @@
       <div class="card4line-card card shadow bg-dark text-light border-0">
         
         <img src="${imagem}"
-             alt="Capa do jogo ${titulo}"
+             alt="${alt}"
              class="card-img-top card4line-imagem"
              loading="lazy">
 
