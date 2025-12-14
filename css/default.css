@@ -146,4 +146,8 @@ header nav ul {
     #menu-hamburger {
         display: flex;
     }
+
+    #footer__logotipo{
+    width: 60%;
+}
 }
